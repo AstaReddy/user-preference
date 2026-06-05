@@ -1,0 +1,10 @@
+{
+  "preferences": {
+    "id": 1,
+    "displayName": "Asta",
+    "language": "Spanish",
+    "emailNotifications": false,
+    "theme": "light"
+  },
+  "$schema": "./node_modules/json-server/schema.json"
+}
