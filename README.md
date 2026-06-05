@@ -1,16 +1,180 @@
-# React + Vite
+# User Preferences App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React-based User Preferences application that allows users to view and update their account settings through a REST API. The application demonstrates frontend development, API integration, responsive design, state management, and integration testing.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+* View user preferences from a REST API
+* Update and save user preferences
+* Light and Dark theme support
+* Responsive design for mobile, tablet, and desktop screens
+* Real-time theme switching
+* Loading and success states
+* Integration tests for API interaction and UI behavior
+* Mock backend API using JSON Server
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+
+* React
+* Vite
+* JavaScript
+* HTML5
+* CSS3
+
+### Backend (Mock API)
+
+* JSON Server
+
+### Testing
+
+* Vitest
+* React Testing Library
+* Jest DOM
+* User Event
+
+---
+
+## Project Structure
+
+```text
+user-preferences-app/
+│
+├── db.json
+├── package.json
+├── vite.config.js
+│
+├── screenshots/
+│   ├── desktop.png
+│   ├── tablet.png
+│   └── mobile.png
+│
+└── src/
+    ├── components/
+    │   ├── UserPreferences.jsx
+    │   └── UserPreferences.test.jsx
+    │
+    ├── services/
+    │   └── api.js
+    │
+    ├── test/
+    │   └── setup.js
+    │
+    ├── App.jsx
+    ├── App.css
+    ├── index.css
+    └── main.jsx
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Navigate to the project directory:
+
+```bash
+cd user-preferences-app
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## Running the Mock API
+
+Start the JSON Server:
+
+```bash
+npm run api
+```
+
+The API will be available at:
+
+```text
+http://localhost:3001/preferences
+```
+
+---
+
+## Running the Application
+
+Start the React application:
+
+```bash
+npm run dev
+```
+
+Open:
+
+```text
+http://localhost:5173
+```
+
+in your browser.
+
+---
+
+## Running Tests
+
+Execute the integration tests:
+
+```bash
+npm test
+```
+
+Current test coverage includes:
+
+* Loading user preferences from the API
+* Editing preference values
+* Saving updated preferences back to the API
+
+---
+
+## API Example
+
+### GET /preferences
+
+Response:
+
+```json
+{
+  "id": 1,
+  "displayName": "Asta",
+  "language": "Spanish",
+  "emailNotifications": false,
+  "theme": "dark"
+}
+```
+
+### PUT /preferences
+
+Updates the stored preferences.
+
+---
+
+## Responsive Design
+
+The application is optimized for:
+
+* Desktop
+* Tablet
+* Mobile
+
+Screenshots demonstrating responsiveness can be found in the `screenshots` folder.
+
+---
